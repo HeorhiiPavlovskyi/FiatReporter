@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Fiat Reporter</title>
+    <link rel="icon" type="image/x-icon" href="img/fiat-newswire-logo.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">  
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"/>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="box">
+<div class="page-navbar">
+  <div class="container">
+    <div class="text-right py-2">
+      <a class="link-green fz-10" style="text-transform: uppercase;" href="#!">english</a>
+      <span class="line">|</span>
+      <a class="link-green fz-10" style="text-transform: uppercase;" href="#!">spanish</a>
+    </div>
+  </div>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container border-bottom">
+      <a class="navbar-brand" href="index.html">
+        <img src="img/fiat-newswire-logo.png" alt="">
+      </a>
+      <div class="d-lg-none text-right">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <form class="form-inline search ml-auto d-block d-lg-none" id="search-form" action="search.html" target="_blank" method="post">
+          <input class="form-control" type="text" placeholder="search fiat" id="search">
+        </form>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <form class="form-inline search ml-auto d-none d-lg-block" id="search-form" action="search.html" target="_blank" method="post">
+          <input class="form-control" type="text" placeholder="search fiat" id="search">
+        </form>
+        <div class="nav-box d-lg-flex">
+          <ul class="navbar-nav mx-auto mt-2 mt-lg-0 text-center text-lg-left">
+            <li class="nav-item active">
+              <a class="nav-link" href="#!">on the hill</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#!"><i class="fa-solid fa-chevron-right fa-rotate-90 mr-1"></i>issues</a>
+              <div class="dropdown-menu">
+                <a href="#!" class="dropdown-item">homeland newswire</a>
+                <a href="#!" class="dropdown-item">interior newswire</a>
+                <a href="#!" class="dropdown-item">state newswire</a>
+                <a href="#!" class="dropdown-item">usda newswire</a>
+                <a href="#!" class="dropdown-item">usdot newswire</a>
+                <a href="#!" class="dropdown-item">commerce newswire</a>
+                <a href="#!" class="dropdown-item">doe newswire</a>
+                <a href="#!" class="dropdown-item">doj newswire</a>
+                <a href="#!" class="dropdown-item">dol newswire</a>
+                <a href="#!" class="dropdown-item">epa newswire</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">opinion</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">profiles</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav mx-auto mt-2 mt-lg-0 text-center text-lg-left">
+            <li class="nav-item">
+              <a class="nav-link" href="#!" data-toggle="modal" data-target="#subscribe-modal">subscribe</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle pr-0" data-toggle="dropdown" href="#!"><i class="fa-solid fa-chevron-right fa-rotate-90"></i>newswires</a>
+              <div class="dropdown-menu">
+                <a href="#!" class="dropdown-item">homeland newswire</a>
+                <a href="#!" class="dropdown-item">interior newswire</a>
+                <a href="#!" class="dropdown-item">state newswire</a>
+                <a href="#!" class="dropdown-item">usda newswire</a>
+                <a href="#!" class="dropdown-item">usdot newswire</a>
+                <a href="#!" class="dropdown-item">commerce newswire</a>
+                <a href="#!" class="dropdown-item">doe newswire</a>
+                <a href="#!" class="dropdown-item">doj newswire</a>
+                <a href="#!" class="dropdown-item">dol newswire</a>
+                <a href="#!" class="dropdown-item">epa newswire</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
+<section class="mt-200 pb-xl-5">
+  <div class="container">
+    <div class="border-bottom py-4 ">
+      <h1 style="text-transform: uppercase; color: #44931f; font-size: 20px;">economic development news</h1>
+    </div>
+    <div class="border-bottom py-5">
+      <div class="results">
+        <h2>Showing results for 'Economics'</h2>
+      </div>
+      <div class="latest-news d-none">
+        <h2>Latest Economic News</h2>
+      </div>
+      <div>
+        <button type="submit" class="btn btn-filter mt-3">refine search</button>
+        <button type="submit" class="btn btn-filter mt-3">sort a-z</button> 
+        <div class="d-inline-block">
+          <span class="d-none" id="date">Wed, May 27 - Fri, May 29</span>
+          <button class="btn btn-filter mt-3" id="reportrange"><i class="fa-solid fa-chevron-down"></i> data range</button>
+        </div>
+        <div class="align-bottom filter-search">
+          <a class="filter-close" href="#!">
+            <i class="fa fa-times"></i>
+          </a>
+          <span class="fz-10">economics</span>
+        </div>
+      </div>
+    </div>
+    <div class="py-4">
+      <div class="row">
+        <div class="col-9">
+          <div class="pb-2 pb-lg-4">
+            <div class="mb-4">
+              <div class="row row-8">
+                <div class="col-6">
+                  <a href="#!">
+                    <div class="bg-img embed-responsive embed-responsive-16by9" style="background-image: url(img/computers.png);"></div>
+                  </a>
+                </div>
+                <div class="col-6">
+                  <h2 class="mb-3 mt-md-2">
+                    <a href="#!">
+                      Holyoke Community College hosts panel of business leaders for Black History Month
+                    </a>
+                  </h2>
+                  <div class="box-date mb-2">
+                    By <a class="link-green" href="#!">Press Release Submission</a> 
+                    <br>
+                    <span>
+                      <a class="link-green" href="#!">February 28, 2023</a>
+                    </span>
+                  </div>
+                  <div class="d-none d-lg-block">
+                    Duis aute irre dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mb-4">
+              <div class="row row-8">
+                <div class="col-6">
+                  <a href="#!">
+                    <div class="bg-img embed-responsive embed-responsive-16by9" style="background-image: url(img/palace.png);"></div>
+                  </a>
+                </div>
+                <div class="col-6">
+                  <h2 class="mb-3 mt-md-2">
+                    <a href="#!">
+                      Black Family Revitalizes Formerly Successful Texas Town With A Block of Black-Owned Buisinesses
+                    </a>
+                  </h2>
+                  <div class="box-date mb-2">
+                    By <a class="link-green" href="#!">Press Release Submission</a> 
+                    <br>
+                    <span>
+                      <a class="link-green" href="#!">February 28, 2023</a>
+                    </span>
+                  </div>
+                  <div class="d-none d-lg-block">
+                    Aute irre dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mb-4">
+              <div class="row row-8">
+                <div class="col-6">
+                  <a href="#!">
+                    <div class="bg-img embed-responsive embed-responsive-16by9" style="background-image: url(img/microphone.png);"></div>
+                  </a>
+                </div>
+                <div class="col-6">
+                  <h2 class="mb-3 mt-md-2">
+                    <a href="#!">
+                      Holyoke Community College hosts panel of business leaders for Black History Month
+                    </a>
+                  </h2>
+                  <div class="box-date mb-2">
+                    By <a class="link-green" href="#!">Press Release Submission</a> 
+                    <br>
+                    <span>
+                      <a class="link-green" href="#!">February 28, 2023</a>
+                    </span>
+                  </div>
+                  <div class="d-none d-lg-block">
+                    Aute irre dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center justify-content-xl-start py-2 py-xl-5">
+        <div class="col-auto">
+          <nav aria-label="...">
+            <ul class="pagination pagination-sm">
+              <li class="page-item active">
+                <a class="page-link" href="#!">01-20</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#">21-40</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#!">41-60</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#">61-80</a>
+              </li>
+              <li class="page-item disabled">
+                <a class="page-link" href="#">...</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#">Last</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="bg-light pt-2 pt-lg-5">
+  <div class="container my-lg-5">
+    <div class="row justify-content-between">
+      <div class="col-4 col-lg-6">
+        <a class="d-inline-block mb-4" href="#!">
+          <img width="110" src="img/fiat-newswire-logo.png" alt="">
+        </a>
+        <div>
+          <a href="#!" data-toggle="modal" data-target="#subscribe-modal">subscribe</a>
+        </div>
+        <div>
+          <a href="#!">about</a>
+        </div>
+        <div>
+          <a href="#!">contact</a>
+        </div>
+      </div>
+      <div class="col-8 col-lg-6">
+        <div class="footer-links">
+          Newswires
+        </div>
+        <div class="row">
+          <div class="col-12 col-lg-6">
+            <div>
+              <a href="#!">homeland newswire</a>
+            </div>
+            <div>
+              <a href="#!">interior newswire</a>
+            </div>
+            <div>
+              <a href="#!">state newswire</a>
+            </div>
+            <div>
+              <a href="#!">usda newswire</a>
+            </div>
+            <div>
+              <a href="#!">usdot newswire</a>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div>
+              <a href="#!">commerce newswire</a>
+            </div>
+            <div>
+              <a href="#!">doe newswire</a>
+            </div>
+            <div>
+              <a href="#!">doj newswire</a>
+            </div>
+            <div>
+              <a href="#!">dol newswire</a>
+            </div>
+            <div>
+              <a href="#!">epa newswire</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="footer-bottom">
+  <div class="container">
+    <div class="row align-items-center justify-content-center">
+      <div class="col-auto">
+        © 2023 Fiat Newswire. All rights reserved.
+      </div>
+      <div class="col-auto">
+        <a href="#!">Privacy Policy</a>
+        <span class="mx-2">|</span>
+        <a href="#!">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal modal-style-subscribe fade" id="subscribe-modal" data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header border-0">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body modal-box-subscribe">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-11 text-center">
+              <p>Want the news delivered straight to your inbox?</p>
+              <p><b>Sign up for the Flat Reporter Newsletter</b></p>
+              <p>and recieve the latest news each week on business, government, real estate and more!</p>
+              <div class="row justify-content-center">
+                <div class="col-9">
+                  <form id="form">
+                    <input class="form-control" type="email" placeholder="E-Mail">
+                    <button type="submit" class="btn btn-block mt-2">Submit</button>
+                    <button type="button" class="btn btn-block" data-dismiss="modal">
+                      No, thanks!
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+  <script src="js/common.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,491 @@
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400700&family=Roboto:wght@400500&display=swap')
+
+$transition: 0.3s
+$green: #44931f
+
+*
+	outline: none !important
+
+img 
+	max-width: 100%
+	height: auto
+a 
+	text-decoration: none !important
+	color: #000
+	transition: $transition
+	&:hover
+		color: #44931f
+	img 
+		transition: $transition
+		&:hover
+			opacity: 0.7
+	h5 
+		color: #000
+		transition: $transition
+		font-weight: bold
+		font-size: 16px
+		line-height: 1
+		text-transform: none
+		&:hover
+			color: #44931f
+
+body 
+	font-family: "Roboto", sans-serif
+	color: #000
+	display: flex
+	background: #FFF
+	flex-direction: column 
+	min-height: 100vh
+
+h1 
+	font-family: "Roboto", sans-serif
+	font-weight: bold 
+	font-size: 32px
+
+h2 
+	font-size: 25px
+	font-weight: bold 
+	font-family: "Domine", serif
+  
+h5 
+	color: #000
+	transition: $transition
+	font-weight: bold
+	font-size: 16px
+
+.fz-10
+	font-size: 10px
+
+.fz-13
+	font-size: 13px
+
+.fixed-top
+	top: 40px
+
+.page-navbar
+	position: absolute
+	top: 0
+	right: 0
+	left: 0
+	border-top: 5px solid #44931f
+	.line 
+		font-size: 11px
+		vertical-align: middle
+		color: #44931f
+	.navbar
+		&.fixed-top
+			position: fixed
+			top: 0
+			margin-top: 0
+			transition: 0.5s
+			background-color: #fff
+			border-top: 5px solid #44931f
+			.navbar-brand
+				padding: 15px 0 15px
+				margin: 0 16px
+				@media (max-width: 767.98px)
+					margin: 0 4px
+				img 
+					height: 50px !important
+			// .navbar-toggler
+			// 	display: none
+		.container
+			display: flex
+			.search
+				position: relative
+				display: flex
+				flex-grow: 1
+				input::placeholder
+					color: #44931f
+					font-size: 16px
+					font-weight: bold
+			.navbar-brand
+				padding-bottom: 30px
+				img 
+					height: 100px
+					@media (max-width: 991.98px)
+						height: 70px
+			.navbar-collapse
+				flex-wrap: wrap
+				flex-direction: column
+				.search
+					position: relative
+					display: flex
+					flex-grow: 1
+					input::placeholder
+						color: #44931f
+						font-size: 16px
+						font-weight: bold
+				.nav-box
+					flex-grow: 1
+					width: 100%
+					margin-top: 16px
+					text-transform: uppercase
+					font-weight: bold
+					font-size: 12px
+					z-index: 1032
+					background: rgba(255, 255, 255, 0.95)
+					transition: $transition
+					position: relative
+					.nav-item
+						.nav-link
+							padding-left: 40px
+						.dropdown-toggle
+							&::after 
+								display: none
+							.fa-chevron-right
+								position: absolute
+								left: 24px
+								top: 10px
+						.nav-link
+							color: #000
+							transition: $transition
+							letter-spacing: 1px
+							&:hover
+								color: #44931f
+							&.active
+								color: #44931f
+
+.mt-200
+	margin-top: 200px
+	.container 
+		.main-img
+			a 
+				transition: $transition
+				&:hover 
+					opacity: 0.7 
+				&:after 	
+					content: ""
+					width: 100%
+					height: 3px 
+					border: 3px solid #44931f
+					display: block
+		.date 
+			font-family: "Domine", serif 
+			font-weight: bold 
+			font-size: 17px
+		.row-8 
+			margin-left: -8px
+			margin-right: -8px
+			> [class*='col']		
+				padding-left: 8px				
+				padding-right: 8px
+		.grey-sec
+			background-color: #f5f9f4
+			h1 
+				font-family: "Domine", serif
+			.news-text
+				font-family: "Roboto", sans-serif 
+				font-weight: normal
+				font-size: 18px
+		.white-block
+			a 
+				text-transform: uppercase
+				text-decoration: none
+				font-weight: bold 
+				font-size: 12px
+				color: #44931f
+				transition: $transition
+				h2 
+					text-transform: none !important
+					font-family: "Domine", serif !important 
+					font-weight: bold 
+					font-size: 25px
+					color: #000
+					transition: $transition
+					&:hover
+						color: #44931f
+					@media (max-width: 991.98px)
+						font-size: 18px
+		.subscribe-block
+			background-image: url(../img/coins.png)
+			background-repeat: no-repeat
+			background-position: center center
+			h2 
+				font-family: "Roboto", sans-serif
+				font-size: 25px
+				font-weight: bolder
+			.title 
+				font-family: "Domine", serif
+				font-weight: bold 
+				color: #44931f
+				font-size: 25px
+				line-height: 1.2
+			.btn-subscribe
+				color: #fff
+				background: #44931f
+				padding: 10px 20px
+				border: 1px solid #44931f
+				border-radius: 100px
+				text-transform: uppercase
+				font-weight: bold
+				display: block
+				transition: $transition
+				&:focus
+					box-shadow: 0 0 0 0.2rem transparent
+				&:active
+					background: #fff
+					color: #44931f
+					box-shadow: transparent
+		.row-4 
+			margin-left: -4px
+			margin-right: -4px
+			> [class*='col']		
+				padding-left: 4px				
+				padding-right: 4px
+		.news-card	
+			.news-col
+				padding: 16px 0
+				h3  
+					font-family: "Domine", serif
+					font-weight: bold 
+					font-size: 16px
+					a 
+						text-decoration: none
+						color: #000
+						transition: $transition
+						&:hover 
+							color: #44931f
+		.news-cards
+			.card
+				border: 0
+				img 
+					height: 120px
+					width: 180px
+					overflow: hidden
+				.card-body
+					padding: 4px 12px
+					.card-title
+						font-family: "Domine", serif
+						font-weight: bold
+						font-size: 16px
+
+.newswire
+	line-height: 1
+	color: #44931f
+	text-transform: uppercase
+	font-size: 10px
+	transition: $transition
+	&:hover
+		color: #000
+
+.sec-titles
+	@media (max-width: 991.98px)
+		padding-top: 6px
+		padding-bottom: 6px
+	a 
+		font-family: "Domine", serif 
+		font-weight: bold 
+		display: inline-block
+		transition: $transition
+		&:hover
+			color: #44931f
+	.stat-cols
+		font-family: "Roboto", sans-serif
+		font-size: 14px
+		line-height: 1.2
+		font-weight: normal
+
+.badge 
+	border-radius: 100px
+	margin-left: 12px
+	font-size: 45%
+	vertical-align: middle
+	text-transform: uppercase
+	line-height: 1.2
+	padding: 6px 8px 4px
+	a 	
+		color: #fff
+
+.badge-success
+	background-color: #44931f !important
+
+.popular
+	.card
+		border: 0
+		img 
+			height: 150px
+		.card-body
+			padding: 8px 0px
+			a 
+				color: #44931f
+				font-family: "Domine", serif 
+				font-weight: bold 
+				display: inline-block
+				font-size: 10px
+				text-transform: uppercase 
+				h5 
+					color: #000
+					transition: $transition
+					font-weight: bold
+					font-size: 16px
+					line-height: 1
+					text-transform: none
+					&:hover
+						color: #44931f
+	
+.bg-img 
+	background-size: cover
+	background-position: center center
+	height: auto
+	cursor: pointer
+	transition: $transition
+
+.embed-responsive
+	display: block
+	width: 100%
+	padding: 0
+	overflow: hidden
+	&:before 
+		content: ""
+		display: block
+
+footer 
+	.footer-links
+		color: #44931f
+		font-family: "Domine", serif
+		font-weight: bolder
+		font-size: 18px
+
+	a 
+		text-transform: uppercase
+		color: #000
+		transition: $transition
+		font-family: "Roboto", sans-serif
+		font-weight: bold
+		letter-spacing: 1px
+		font-size: 12px
+		&:hover
+			color: #44931f
+
+.footer-bottom
+	background: #e3efde
+	padding: 25px 0
+	font-size: 12px
+	text-align: center
+	a 
+		color: #44931f
+		transition: $transition
+		&:hover
+			color: #000
+
+.modal-style-subscribe
+	.modal-content
+		color: #fff
+		background: #44931f
+		.modal-header
+			padding: 8px 8px
+			span 
+				color: #fff
+		.modal-body
+			padding: 0px 16px 32px
+			.btn 
+				border: 2px solid #fff
+				background: #44931f
+				color: #fff
+				border-radius: 0
+				transition: $transition
+				&:active
+					background: #fff
+					color: #44931f
+
+.title-white
+	color: #fff
+	font-family: "Domine", serif 
+	font-weight: 600
+	font-size: 22px
+	transition: $transition
+	padding: 20px 15px
+	&:hover
+		color: #cdcdcd
+
+.form-control
+	height: 40px
+	&:focus
+		box-shadow: 0 0 0 1px #44931f
+		border-color: #44931f
+	&::placeholder
+		color: #44931f
+
+
+.btn-filter
+	color: #fff
+	font-size: 14px
+	background: #44931f
+	padding: 5px 15px
+	border: 1px solid #44931f
+	border-radius: 100px
+	text-transform: uppercase
+	font-weight: bold
+	display: inline-block
+	transition: $transition
+	&:focus
+		box-shadow: 0 0 0 0.2rem transparent
+	&:active
+		background: #fff
+		color: #44931f
+		box-shadow: transparent
+
+.filter-close
+	display: inline-block
+	border-radius: 100px
+	background: #bcd8b0
+	color: #000
+	width: 30px
+	height: 30px
+	line-height: 30px
+	text-align: center
+	font-size: 18px
+
+.filter-search
+	display: inline-block
+	transition: $transition
+
+.box-date 
+	font-size: 14px
+	font-family: "Domine", sans-serif
+	line-height: 1.2
+
+.link-green
+	color: #44931f
+	font-weight: bold
+	transition: $transition
+	&:hover
+		color: #000
+
+.pagination
+	@media (max-width: 767.98px)
+		font-size: 11px
+	.page-item
+		&.active
+			.page-link
+				color: #6c757d
+				pointer-events: none
+				cursor: auto
+				background-color: #fff
+				border-color: #dee2e6
+		.page-link
+			color: #44931f
+			font-size: 14px
+			font-weight: bold
+			border-radius: 0 !important
+			border: 1px solid #bcd8b0
+			text-transform: uppercase
+
+.latest-news
+	transition: $transition
+
+.social-box
+	max-width: 280px
+	width: 100%
+	display: inline-block
+	padding: 10px 0
+	@media (min-width: 992px)
+		padding: 10px 20px
+		float: right
+		margin-left: 16px
+		border-left: 1px solid #c7debb
+	.social-links
+		span 
+			display: inline-block
+			margin-right: 10px
