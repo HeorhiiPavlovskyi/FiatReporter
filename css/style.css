@@ -43,6 +43,9 @@ h2 {
   font-size: 25px;
   font-weight: bold;
   font-family: "Domine", serif; }
+  @media (max-width: 767.98px) {
+    h2 {
+      font-size: 18px; } }
 
 h5 {
   color: #000;
@@ -139,6 +142,43 @@ h5 {
             color: #44931f; }
           .page-navbar .navbar .container .navbar-collapse .nav-box .nav-item .nav-link.active {
             color: #44931f; }
+
+.sandwich {
+  display: inline-block;
+  color: #44931f;
+  cursor: pointer;
+  transition: none;
+  padding: 0;
+  border: 0;
+  background-color: #fff;
+  transition: 0.3s; }
+  .sandwich:hover {
+    opacity: 0.6; }
+  .sandwich:before {
+    width: 26px; }
+  .sandwich span {
+    width: 26px; }
+  .sandwich:after {
+    width: 26px; }
+  .sandwich:before, .sandwich:after {
+    content: ""; }
+  .sandwich span, .sandwich:after {
+    margin-top: 6px; }
+  .sandwich span, .sandwich:before, .sandwich:after {
+    display: block;
+    transition: 0.3s;
+    transform-origin: right center;
+    border-top: 2px solid #44931f;
+    margin-left: auto; }
+  .sandwich:not(.collapsed):before {
+    transform: translateY(-1px) rotate(-45deg); }
+  .sandwich:not(.collapsed) span {
+    width: 0;
+    opacity: 0; }
+  .sandwich:not(.collapsed):after {
+    transform: translateY(1px) rotate(45deg); }
+  .sandwich:hover {
+    opacity: 0.8; }
 
 .mt-200 {
   margin-top: 200px; }

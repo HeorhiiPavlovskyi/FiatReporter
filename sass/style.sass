@@ -46,6 +46,8 @@ h2
 	font-size: 25px
 	font-weight: bold 
 	font-family: "Domine", serif
+	@media (max-width: 767.98px)
+		font-size: 18px
   
 h5 
 	color: #000
@@ -145,6 +147,44 @@ h5
 								color: #44931f
 							&.active
 								color: #44931f
+
+.sandwich
+	display: inline-block
+	color: #44931f
+	cursor: pointer
+	transition: none
+	padding: 0
+	border: 0
+	background-color: #fff
+	transition: $transition
+	&:hover 
+		opacity: .6
+	&:before
+		width: 26px
+	span
+		width: 26px
+	&:after
+		width: 26px
+	&:before, &:after
+		content: ''
+	span, &:after
+		margin-top: 6px
+	span, &:before, &:after
+		display: block
+		transition: $transition
+		transform-origin: right center
+		border-top: 2px solid #44931f
+		margin-left: auto
+	&:not(.collapsed)
+		&:before
+			transform: translateY(-1px) rotate(-45deg)
+		span
+			width: 0
+			opacity: 0
+		&:after
+			transform: translateY(1px) rotate(45deg)
+	&:hover 
+		opacity: 0.8
 
 .mt-200
 	margin-top: 200px
